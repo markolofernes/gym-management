@@ -20,9 +20,9 @@
                             <th>ID</th>
                             <th>Name</th>
                             <th>Membership</th>
-                            <th>Membership Validity</th>
+                            <th>Validity</th>
                             <th>Email</th>
-                            
+                            <th>Trainer</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -33,6 +33,7 @@
                             <td>{{ $member->membership_type }}</td>
                             <td>{{ $member->membership_expiration }}</td>
                             <td>{{ $member->email }}</td>
+                            <td>{{ $member->trainer_id }}</td>
                             <td><a href="{{ route('deletemember', $member->id) }}">❌</a></td>
                             <td><a href="{{ route('editform', $member->id) }}">📝</a></td>
                         </tr>

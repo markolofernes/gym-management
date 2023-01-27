@@ -33,7 +33,7 @@ class MemberController extends Controller
     public function edit($id)
     {
         $member = Member::find($id);
-        return view('editform')->with('Member', $member);
+        return view('editform')->with('member', $member);
     }
     public function update(Request $request)
     {
@@ -42,6 +42,7 @@ class MemberController extends Controller
         $member->email = $request->email;
         $member->membership_type = $request->membership_type;
         $member->membership_expiration = $request->membership_expiration;
+        $member->trainer_id = $request->trainer_id;
         $member->save();
         return redirect()->route('index')->with('success', ' Successfully added!');
     }

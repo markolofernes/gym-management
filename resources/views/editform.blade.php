@@ -9,11 +9,12 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     </head>
 <body>
+    <a class="btn btn-primary btn-sm shadow" href="/">🏠</a>
     <div class="container">
         <div class="row">
             <div class="col-md-1"></div>
             <div class="col-md-10 m-5 p-4 shadow-lg">
-                    <h1>members</h1><hr>
+                    <h1>Edit Members</h1><hr>
                 <center>
                  <form action="{{ route('updatemember', $member->id) }}" method="POST">
                     @csrf
@@ -27,14 +28,20 @@
                                 <label for="email">Email</label>
                                 <input class="form-control" type="email" name="email" value="{{ $member->email }}" required><br>
                             </div>
-                            <div class="col-sm-6">
+                            <div class="col-sm-4">
                                 <label for="membership_type">Membership</label>
                                 <input class="form-control" type="text" name="membership_type" value="{{ $member->membership_type }}" required><br>
                             </div>
-                            <div class="col-sm-6">
+                            <div class="col-sm-4">
                                 <label for="membership_expiration">Membership Validity</label>
                                 <input class="form-control" type="text" name="membership_expiration" value="{{ $member->membership_expiration }}" required><br>
                             </div>
+
+                            <div class="col-sm-4">
+                                <label for="trainer_id">Trainor</label>
+                                <input class="form-control" type="text" name="trainer_id" value="{{ $member->trainer_id }}" required><br>
+                            </div>
+
                         <button class="btn btn-primary" type="submit">Update member</button>
                     </div>
                 </form>
