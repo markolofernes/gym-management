@@ -15,6 +15,9 @@
             <div class="col-md-1"></div>
             <div class="col-md-10 m-5 p-4 shadow-lg">
                     <h1>Edit Members</h1><hr>
+                    
+                  {{-- <a href=" {{ route('member/{id}/trainer', $member->trainer_id) }}">Trainer</a> --}}
+                   
                 <center>
                  <form action="{{ route('updatemember', $member->id) }}" method="POST">
                     @csrf
@@ -29,8 +32,8 @@
                                 <input class="form-control" type="email" name="email" value="{{ $member->email }}" required><br>
                             </div>
                             <div class="col-sm-4">
-                                <label for="membership_type">Membership</label>
-                                <input class="form-control" type="text" name="membership_type" value="{{ $member->membership_type }}" required><br>
+                                <label for="membership_type"><a href="{{ route('membership', $member->membership_id) }}">Membership</a></label>
+                                <input class="form-control" type="number" name="membership_id" value="{{ $member->membership_id }}" required><br>
                             </div>
                             <div class="col-sm-4">
                                 <label for="membership_expiration">Membership Validity</label>
@@ -38,7 +41,7 @@
                             </div>
 
                             <div class="col-sm-4">
-                                <label for="trainer_id">Trainor</label>
+                                <label for="trainer_id"><a href="{{ route('trainer', $member->trainer_id) }}">Trainer</a></label>
                                 <input class="form-control" type="text" name="trainer_id" value="{{ $member->trainer_id }}" required><br>
                             </div>
 

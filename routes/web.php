@@ -25,4 +25,8 @@ Route::get('/deletemember/{id}', [MemberController::class, 'delete'])->name('del
 
 Route::get('/editform/{id}', [MemberController::class, 'edit'])->name('editform');
 
-Route::post('updatemember{id}', [MemberController::class, 'update'])->name('updatemember');
+Route::post('updatemember/{id}', [MemberController::class, 'update'])->name('updatemember');
+
+Route::get('trainer/{id}', [MemberController::class, 'showtrainer'])->name('trainer');
+
+Route::get('membership/{id}', [MemberController::class, 'showmembership'])->name('membership');

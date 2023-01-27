@@ -19,7 +19,6 @@
                         <tr>
                             <th>ID</th>
                             <th>Name</th>
-                            <th>Membership</th>
                             <th>Validity</th>
                             <th>Email</th>
                             <th>Trainer</th>
@@ -31,7 +30,6 @@
                         <tr>
                             <td>{{ $member->id }}</td>
                             <td>{{ $member->name }}</td>
-                            <td>{{ $member->membership_type }}</td>
                             <td>{{ $member->membership_expiration }}</td>
                             <td>{{ $member->email }}</td>
                             <td>{{ $member->trainer_id }}</td>
@@ -59,20 +57,12 @@
                             <input class="form-control" type="email" name="email" required><br>
                         </div>
 
-                        <div class="col-sm-6">
-                            <label for="membership_type">Membership</label>
-                            <input class="form-control" type="text" name="membership_type" required><br>
-                        </div>
+
 
                         <div class="col-sm-6">
                             <label for="membership_expiration">Membership Validity</label>
                             <input class="form-control" type="date" name="membership_expiration" required><br>
                         </div>
-{{-- 
-                        <div class="col-sm-6">
-                            <label for="trainer_id">Trainer</label>
-                            <input class="form-control" type="number" name="trainer_id" required><br>
-                        </div> --}}
 
                         <div class="col-sm-6">
                             <label for="trainer_id">Trainor</label>
@@ -83,8 +73,15 @@
                             </select>
                         </div>
 
+                        <div class="col-sm-6">
+                            <label for="membership_id">Membership ID</label>
+                            <input class="form-control" type="number" value="1" name="membership_id" required><br>
+                        </div>
                         <button class="btn btn-primary mt-5" type="submit">Add member</button>
                     </div>
+                    {{-- @foreach ($membership as $membership)
+                    <td>{{$membership->membership_type}}</td>
+                    @endforeach --}}
                 </form>
                 </center>
             </div>
