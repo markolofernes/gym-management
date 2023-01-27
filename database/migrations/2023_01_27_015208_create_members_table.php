@@ -16,8 +16,8 @@ return new class extends Migration {
             $table->id();
             $table->string('name');
             $table->string('email');
-            $table->id();
-            $table->id();
+            $table->string('membership_type');
+            $table->date('membership_expiration');
             $table->timestamps();
         });
     }
