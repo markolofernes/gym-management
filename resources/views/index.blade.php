@@ -34,6 +34,7 @@
                             <td>{{ $member->membership_expiration }}</td>
                             <td>{{ $member->email }}</td>
                             <td>{{ $member->trainer_id }}</td>
+                            <td>{{ $member->membership_id }}</td>
                             <td><a href="{{ route('deletemember', $member->id) }}">❌</a></td>
                             <td><a href="{{ route('editform', $member->id) }}">📝</a></td>
                         </tr>

@@ -10,7 +10,9 @@ class MemberController extends Controller
 
     public function index()
     {
-        return view('index')->with('members', Member::latest()->get());
+        return view('index')
+            ->with('members', Member::latest()->get());
+
     }
     public function create(Request $request)
     {
