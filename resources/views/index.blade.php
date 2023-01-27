@@ -23,6 +23,7 @@
                             <th>Validity</th>
                             <th>Email</th>
                             <th>Trainer</th>
+                            <th>Membership ID</th>
                         </tr>
                     </thead>
                     <tbody>
