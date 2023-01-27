@@ -21,6 +21,8 @@ class MemberController extends Controller
         $member->email = $request->email;
         $member->membership_type = $request->membership_type;
         $member->membership_expiration = $request->membership_expiration;
+        $member->trainer_id = $request->trainer_id;
+        // $member->membership_id = $request->membership_id;
         $member->save();
         return redirect()->route('index')->with('success', $request->name . ' Successfully added!');
     }
@@ -45,6 +47,7 @@ class MemberController extends Controller
         $member->membership_type = $request->membership_type;
         $member->membership_expiration = $request->membership_expiration;
         $member->trainer_id = $request->trainer_id;
+        // $member->membership_id = $request->membership_id;
         $member->save();
         return redirect()->route('index')->with('success', ' Successfully added!');
     }

@@ -14,7 +14,7 @@ return new class extends Migration {
     {
         Schema::create('membership', function (Blueprint $table) {
             $table->id();
-            $table->string('membership_type');
+            $table->string('membership_type')->default(1);
             $table->double('membership_price');
             $table->timestamps();
         });

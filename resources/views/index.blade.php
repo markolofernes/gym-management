@@ -43,7 +43,8 @@
                     </tr>
                     </tbody>
                     <tr>
-                </table><hr>
+                </table>
+                <br><hr><h3 class="text-center">Add a member</h3><hr><br>
                 <center>
                 <form action="{{ route('addmember') }}" method="POST">
                     @csrf
@@ -67,8 +68,22 @@
                             <label for="membership_expiration">Membership Validity</label>
                             <input class="form-control" type="date" name="membership_expiration" required><br>
                         </div>
+{{-- 
+                        <div class="col-sm-6">
+                            <label for="trainer_id">Trainer</label>
+                            <input class="form-control" type="number" name="trainer_id" required><br>
+                        </div> --}}
 
-                        <button class="btn btn-primary" type="submit">Add member</button>
+                        <div class="col-sm-6">
+                            <label for="trainer_id">Trainor</label>
+                            <select class="form-select form-select-sm" aria-label=".form-select-sm example" name="trainer_id">
+                            <option selected></option>
+                                <option selected value="1">Son Goku</option>
+                                <option value="2">Saitama</option>
+                            </select>
+                        </div>
+
+                        <button class="btn btn-primary mt-5" type="submit">Add member</button>
                     </div>
                 </form>
                 </center>
